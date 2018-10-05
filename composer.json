@@ -1,0 +1,23 @@
+{
+  "name": "noroman/filestorage",
+  "description": "File storage",
+  "type": "library",
+  "license": "MIT",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Roman Novikov",
+      "email": "sevice.for.roman@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "FileStorage\\": "src/"
+    }
+  }
+}
