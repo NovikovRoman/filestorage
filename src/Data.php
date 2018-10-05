@@ -13,7 +13,7 @@ class Data
      */
     public function encode($data)
     {
-        $data = json_encode($data);
+        $data = json_encode($data, JSON_UNESCAPED_UNICODE);
         if ($data === false) {
             throw new DataException($this->getError());
         }
