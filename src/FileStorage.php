@@ -22,6 +22,17 @@ class FileStorage
         $this->pathStorage = $pathStorage;
     }
 
+    public function has($name)
+    {
+        $this->getHash($name);
+        try {
+            $res = file_exists($this->getPath());
+        } catch (DataException $e) {
+            return false;
+        }
+        return $res;
+    }
+
     /**
      * @param string $name
      * @param string|array $data
