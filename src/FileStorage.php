@@ -50,6 +50,21 @@ class FileStorage
 
     /**
      * @param $name
+     * @return bool
+     * @throws DataException
+     */
+    public function remove($name)
+    {
+        $this->getHash($name);
+        $path = $this->getPath();
+        if (file_exists($path)) {
+            return unlink($path);
+        }
+        return true;
+    }
+
+    /**
+     * @param $name
      * @param bool $asArray
      * @return mixed
      * @throws DataException
